@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Hello React</title>
+		<script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+		<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
+	</head>
+	<body>
+
+		<div id="app"></div>
+		<div id="app_1"></div>
+		<div id="app_2"></div>
+		<div id="pic"></div>
+		<div id="timer-example"></div>
+		
+
+		<script type="text/babel">
+			// Функционально
+			function Hello() {
+				return <h1>Hello</h1>;
+			}
+			
+			ReactDOM.render(
+				<Hello />,
+				document.getElementById("app")
+			)
+		</script>
+
+		<script type="text/babel">
+			// Стрелочная функция
+			var Hello =() => {
+				return (<h1>React</h1>);
+			}
+			
+			ReactDOM.render(
+				<Hello />,
+				document.getElementById("app_1")
+			)
+		</script>
+
+		<script type="text/babel">
+			// Класс
+			class Hello extends React.Component
+			{
+				render() 
+				{
+					return <h1>Text</h1>;
+				}
+			}
+			
+			ReactDOM.render(
+				<Hello />,
+				document.getElementById("app_2")
+			)
+		</script>
+
+		<script type="text/babel">
+			const styleObj = {
+				width: "100px",
+				height: "100px"
+			}
+			ReactDOM.render(
+				<img src="Bandana_I.jpg" alt="Cat" style={styleObj} />,
+				document.getElementById("pic")
+			);
+		</script>
+
+		<script type="text/babel">
+			const styleObj = 
+			{
+				"border": "3px solid #000",
+				"width": "100px",
+				"border-radius": "5px",
+				"margin-bottom": "50px"
+			}
+			class Timer extends React.Component
+			{
+				constructor(props) 
+				{
+					super(props);
+					this.state = { seconds: 0 };
+				}
+
+				tick() 
+				{
+					this.setState(state => ({
+					seconds: state.seconds + 1
+					}));
+				}
+
+				componentDidMount() 
+				{
+					this.interval = setInterval(() => this.tick(), 1000);
+				}
+
+				componentWillUnmount() 
+				{
+					clearInterval(this.interval);
+				}
+
+				render() 
+				{
+					return (
+					<div style={styleObj}>
+						Seconds: {this.state.seconds}
+					</div>
+					);
+				}
+			}
+
+			ReactDOM.render(
+				<Timer />,
+				document.getElementById('timer-example')
+			);
+		</script>
+
+	</body>
+</html> 
