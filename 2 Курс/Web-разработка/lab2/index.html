@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>lab2</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+    <!-- Don't use this in production: -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root_1"></div>
+    <script type="text/babel">
+		ReactDOM.render(
+			<h1>Hi</h1>,
+			document.getElementById('root_1')
+		);
+    </script>
+
+	<div id="example"></div>
+	<script type="text/babel">
+		ReactDOM.render(
+			<h1>React</h1>,
+			document.getElementById('example')
+		);
+	</script>
+  </body>
+</html>
