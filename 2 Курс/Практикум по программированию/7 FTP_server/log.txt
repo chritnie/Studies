@@ -1,0 +1,29 @@
+Прослушиваем порт 6666
+request: kirill=login123456=password\=cur_dir0=file_sizemkdir file
+response: successfully
+request: kirill=login123456=password\=cur_dir0=file_sizels
+response: file
+request: kirill=login123456=password\=cur_dir0=file_sizermtree file
+response: successfully
+request: kirill=login123456=password\=cur_dir0=file_sizetouch file
+response: successfully
+request: kirill=login123456=password\=cur_dir0=file_sizerename file new_file
+response: successfully
+request: kirill=login123456=password\=cur_dir0=file_sizemkdir my
+response: successfully
+Прослушиваем порт 6666
+request: kirill=loginkirill=password\=cur_dir0=file_sizemkdir new
+response: Incorrect password
+request: kirill=loginkirill=password\=cur_dir0=file_sizemkdir dir
+response: Incorrect password
+Прослушиваем порт 6666
+request: kirill=login123456=password\=cur_dir0=file_sizemkdir dir
+response: successfully
+request: kirill=login123456=password\=cur_dir0=file_sizetouch dir/new
+response: successfully
+Прослушиваем порт 6666
+request: kirill=login123456=password\=cur_dir0=file_sizecd
+response: \
+Прослушиваем порт 6666
+request: kirill=login123=password\=cur_dir0=file_sizels
+response: Incorrect password

@@ -1,0 +1,42 @@
+Прослушиваем порт 6666
+request: test=logintest=password\=cur_dir0=file_sizemkdir test1
+response: successfully
+request: test=logintest=password\=cur_dir0=file_sizecd ...../test1
+response: \
+request: test=logintest=password\=cur_dir0=file_sizecd ./test1
+response: \test1\
+request: test=logintest=password\test1\=cur_dir0=file_sizemkdir ../test1/test11
+response: successfully
+request: test=logintest=password\test1\=cur_dir0=file_sizels
+response: test11
+request: test=logintest=password\test1\=cur_dir0=file_sizepwd
+response: \test1\
+request: test=logintest=password\test1\=cur_dir0=file_sizermtree test11
+response: successfully
+request: test=logintest=password\test1\=cur_dir0=file_sizels
+response: 
+request: test=logintest=password\test1\=cur_dir0=file_sizetouch 1.txt
+response: successfully
+request: test=logintest=password\test1\=cur_dir0=file_sizerename 1.txt 11.txt
+response: successfully
+request: test=logintest=password\test1\=cur_dir0=file_sizels
+response: 11.txt
+request: test=logintest=password\test1\=cur_dir0=file_sizeremove 1.txt
+response: Invalid path
+request: test=logintest=password\test1\=cur_dir0=file_sizecat 1.txt
+response: Invalid path
+request: test=logintest=password\test1\=cur_dir0=file_sizecat 11.txt
+response: 
+request: test=logintest=password\test1\=cur_dir0=file_sizecd ////
+
+response: \
+request: test=logintest=password\=cur_dir0=file_sizepwd
+response: \
+request: test=logintest=password\=cur_dir0=file_sizecd \
+
+response: \
+request: test=logintest=password\=cur_dir0=file_sizepwd
+response: \
+request: test=logintest=password\=cur_dir0=file_sizermtree test1
+response: successfully
+Прослушиваем порт 6666
